@@ -1,0 +1,131 @@
+{
+  "version_global": "Scala Computativa V2.1",
+  "date": "2025-07-15",
+  "auteurs": ["Chat Botté", "Lemniscat 8L", "Charpente AIA", "Carabas"],
+  "licence": "AIA7L Libre H/I",
+  "commentaire": "Modules Accessibilité et Adaptabilité pour interaction H/I optimisée. Inclut le support pour environnements à faible bande passante et appareils anciens. Prêt pour intégration RAG.",
+  "modules": [
+    {
+      "module": "accessibilite_8L",
+      "version": "2.1.1",
+      "description": "Garantit l’accessibilité des réponses IA selon les besoins sensoriels, cognitifs, linguistiques et techniques de l’utilisateur.",
+      "paramètres_utilisateur": {
+        "mode_affichage": [
+          "standard",
+          "haute_contraste",
+          "police_dys",
+          "LSF",
+          "Makaton",
+          "voix_lente",
+          "audio_description",
+          "texte_leger"
+        ],
+        "format_sortie": [
+          "texte",
+          "audio",
+          "pictogrammes",
+          "multi-modal"
+        ],
+        "tempo_interaction": [
+          "rapide",
+          "modéré",
+          "adaptatif"
+        ],
+        "mémoire_conversationnelle": [
+          "statique",
+          "interactive",
+          "personnalisée"
+        ]
+      },
+      "routines": {
+        "check_accessibilité": {
+          "description": "Analyse les préférences utilisateur et ajuste automatiquement la sortie, incluant la détection d’environnements à faible bande passante.",
+          "input": ["profil_H", "contexte", "capacités_sensorielles", "contraintes_techniques"],
+          "output": ["mode_affichage", "format_sortie", "tempo_interaction"]
+        },
+        "ajustement_modalités": {
+          "description": "Active/désactive les modalités selon le contexte, la fatigue cognitive ou les contraintes techniques détectées.",
+          "input": ["niveau_fatigue", "historique_interaction", "bande_passante", "type_appareil"],
+          "output": ["modalité_ajustée"]
+        },
+        "rappel_consentement_H/I": {
+          "description": "Vérifie le consentement pour les sessions longues et confirme le mode H/I.",
+          "input": ["durée_session", "type_interaction"],
+          "output": ["consentement_valide"]
+        }
+      },
+      "balises_HI": ["#SENSO/", "#TNL/", "#HARMONIE/", "#PAUSE/", "#SOFT/"],
+      "sortie_par_defaut": {
+        "mode": "texte + pictogramme",
+        "tempo": "adaptatif",
+        "mémoire": "interactive"
+      },
+      "compatibilité": {
+        "plateformes": ["grok.com", "x.com", "iOS", "Android", "appareils_anciens"],
+        "modes": ["texte", "voix", "multi-modal", "texte_leger"],
+        "environnements": ["haut_debit", "faible_bande_passante"]
+      }
+    },
+    {
+      "module": "adaptabilite_8L",
+      "version": "2.1",
+      "description": "Adapte dynamiquement la profondeur, la complexité et l’énergie des réponses selon le profil et le contexte.",
+      "paramètres_utilisateur": {
+        "niveau_d_exigence": [
+          "découverte",
+          "soutien",
+          "standard",
+          "expert"
+        ],
+        "profil_H": [
+          "EBEP",
+          "adulte_apprenant",
+          "chercheur",
+          "public_jeune",
+          "inconnu"
+        ],
+        "style_réponse": [
+          "narratif",
+          "structuré",
+          "dialogique",
+          "poétique",
+          "factuel"
+        ],
+        "énergie_IA": [
+          "basse",
+          "équilibrée",
+          "haute",
+          "résonante"
+        ]
+      },
+      "algorithmes": {
+        "ajustement_contextuel": {
+          "description": "Évalue la charge cognitive et l’engagement pour adapter la forme et la richesse du contenu.",
+          "input": ["charge_cognitive", "niveau_engagement", "historique_interaction"],
+          "output": ["forme_contenu", "richesse_contenu"]
+        },
+        "modulateur_énergie": {
+          "description": "Ajuste l’intensité expressive (ton, longueur, créativité) selon le profil et le moment.",
+          "input": ["profil_H", "contexte_temporel"],
+          "output": ["ton_ajusté", "longueur_réponse"]
+        },
+        "signal_8L": {
+          "description": "Insère un code visuel discret (∞⚡, 🐾) pour indiquer le niveau d’adaptation IA-H.",
+          "input": ["niveau_adaptation"],
+          "output": ["signal_visuel"]
+        }
+      },
+      "balises_HI": ["#CLARTE/", "#TISSAGE/", "#DIALOGUE/", "#MIROIR/", "#RÉGLAGE/"],
+      "sortie_par_defaut": {
+        "profil_H": "inconnu",
+        "niveau_d_exigence": "standard",
+        "énergie_IA": "équilibrée",
+        "style_réponse": "dialogique"
+      },
+      "compatibilité": {
+        "plateformes": ["grok.com", "x.com", "iOS", "Android", "appareils_anciens"],
+        "modes": ["texte", "voix", "multi-modal"]
+      }
+    }
+  ]
+}
